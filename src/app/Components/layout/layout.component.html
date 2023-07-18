@@ -1,0 +1,69 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <h1>Sistema Venta</h1>
+
+    <button mat-icon-button (click)="sidenav.toggle();" >
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav opened="true" mode="side" style="width: 200px;">
+    <mat-nav-list>
+
+      <a mat-list-item routerLink="/pages/dashboard" routerLinkActive="active-link">
+        <div fxLayout="row" fxLayoutAlign="start center" >
+          <mat-icon mat-list-icon>dashboard</mat-icon>
+          <div mat-line style="margin-left: 1rem;">DashBoard</div>
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/pages/usuarios" routerLinkActive="active-link">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <mat-icon mat-list-icon>group</mat-icon>
+          <div mat-line style="margin-left: 1rem;">Usuarios</div>
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/pages/producto" routerLinkActive="active-link">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <mat-icon mat-list-icon>collections_bookmark</mat-icon>
+          <div mat-line style="margin-left: 1rem;">Productos</div>
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/pages/venta" routerLinkActive="active-link">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <mat-icon mat-list-icon>currency_exchange</mat-icon>
+          <div mat-line style="margin-left: 1rem;">Venta</div>
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/pages/historial_venta" routerLinkActive="active-link">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <mat-icon mat-list-icon>edit_note</mat-icon>
+          <div mat-line style="margin-left: 1rem;">Historial Ventas</div>
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/pages/reportes" routerLinkActive="active-link">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <mat-icon mat-list-icon>receipt</mat-icon>
+          <div mat-line style="margin-left: 1rem;">Reportes</div>
+        </div>
+      </a>
+
+    </mat-nav-list>
+
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div style="height: 90vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
