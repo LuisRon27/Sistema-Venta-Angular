@@ -66,9 +66,9 @@ export class ModalUsuarioComponent implements OnInit {
   }
 
   guardarEditar_Usuario() {
-     // Check if the roles are loaded before proceeding with the save
-     if (this.listaRoles.length === 0) {
-      // Roles are not loaded yet, show an error or a loading message to the user
+
+    if (this.listaRoles.length === 0) {
+
       return;
     }
 
@@ -90,30 +90,30 @@ export class ModalUsuarioComponent implements OnInit {
 
     if (this.datosUsuario == null) {
       this._usuarioServicio.guardar(_usuario).subscribe({
-        next: (data) =>{
+        next: (data) => {
           if (data.status) {
-            this._utilidadServicio.mostrarAlerta("El Usuario Fue Registrado","Exito");
+            this._utilidadServicio.mostrarAlerta("El Usuario Fue Registrado", "Exito");
             this.modalActual.close("true")
           }
           else {
             this._utilidadServicio.mostrarAlerta("No se pudo registrar el usuario", "Error")
           }
         },
-        error:(e) =>{}
+        error: (e) => { }
       })
     }
     else {
       this._usuarioServicio.editar(_usuario).subscribe({
-        next: (data) =>{
+        next: (data) => {
           if (data.status) {
-            this._utilidadServicio.mostrarAlerta("El Usuario Fue Editado","Exito");
+            this._utilidadServicio.mostrarAlerta("El Usuario Fue Editado", "Exito");
             this.modalActual.close("true")
           }
           else {
             this._utilidadServicio.mostrarAlerta("El usuario no se pudo editar", "Error")
           }
         },
-        error:(e) =>{}
+        error: (e) => { }
       })
     }
   }
