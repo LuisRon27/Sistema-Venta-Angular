@@ -1,0 +1,16 @@
+@media (max-width:450px){
+  mat-toolbar-row{
+    width: 100%;
+  }
+  .md-1{
+    font-size: 2rem !important;
+    margin: 0;
+  }
+  .md{
+    font-size: 1rem !important;
+    display: none;
+  }
+  mat-icon{
+
+  }
+}

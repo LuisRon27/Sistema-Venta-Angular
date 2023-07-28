@@ -6,4 +6,35 @@ mat-icon{
   font-size: 50px !important;
   height: 50px !important;
   width: 50px !important;
+
+}
+
+@media (max-width:450px) {
+
+  mat-icon{
+    font-size: 25px !important;
+    height: 25px !important;
+    width: 25px !important;
+  }
+
+  mat-card-header{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    padding: 0;
+  }
+  .mat-mdc-card-avatar{
+    margin: 0;
+  }
+
+  mat-card-title{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+
+  }
+
+  mat-card-subtitle{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
 }

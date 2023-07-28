@@ -1,3 +1,36 @@
 .full-width, table{
   width: 100%;
 }
+
+.ms{
+  margin-left: 40px;
+
+}
+
+.mat-card{
+  margin: 20px 40px 40px 40px;
+  overflow: hidden;
+}
+
+
+/* Responsive styles for small screens */
+@media (max-width: 450px) {
+
+  tr{
+    text-align: center;
+  }
+  td,th{
+    font-size: .5rem;
+    padding: .7rem;
+    text-align: center;
+  }
+
+  mat-card{
+    margin-left:0 ;
+    margin-right:0 ;
+  }
+
+
+
+
+}
